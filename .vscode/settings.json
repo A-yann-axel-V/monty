@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "monty.h": "c"
-    }
+        "monty.h": "c",
+        "string.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
 }
