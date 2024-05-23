@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "monty.h": "c",
-        "string.h": "c",
-        "free_stack.C": "cpp"
-    },
-    "C_Cpp.errorSquiggles": "enabled"
-}
