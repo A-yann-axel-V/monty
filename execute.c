@@ -10,7 +10,6 @@ void execute_monty(char *file)
 {
 	FILE *fp;
 	char *line = NULL;
-	size_t len = 0;
 	unsigned int line_number = 0;
 	stack_t *stack = NULL;
 	char *opcode = NULL;
@@ -23,7 +22,10 @@ void execute_monty(char *file)
 		exit(EXIT_FAILURE);
 	}
 
-	while (getline(&line, &len, fp) != -1)
+	line = (char *) malloc(sizeof(char) * MAX_LEN);
+	if (line == NULL)
+		exit(EXIT_FAILURE);
+	while (fgets(line, MAX_LEN, fp) != NULL)
 	{
 		line_number++;
 		opcode = strtok(line, " \n");
